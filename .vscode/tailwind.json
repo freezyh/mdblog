@@ -1,0 +1,13 @@
+{
+  "version": 1.1,
+  "atDirectives": [
+    {
+      "name": "@utility",
+      "description": "A custom utility directive."  
+    },
+    {
+      "name": "@apply",
+      "description": "Inline utility classes."
+    }
+  ]
+}

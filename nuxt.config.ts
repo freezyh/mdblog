@@ -1,7 +1,6 @@
 /* import { readFileSync } from "node:fs"; */
 // https://nuxt.com/docs/api/configuration/nuxt-config
 /* import tailwindTheme from "./app/assets/shiki/themes/tailwind.json";
-
 console.log(tailwindTheme); */
 export default defineNuxtConfig({
   compatibilityDate: "2025-07-15",

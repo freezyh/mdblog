@@ -3,22 +3,16 @@
 Here is some content.
 
 ```js [config.js]
-let a = 123; // precision for decimal numbers (2 by default)
+const a = 123; // precision for decimal numbers (2 by default)
 ```
 
-```js [config.js]
-export default {
-  css: {
-    inline: true,
-    purge: true,
-    resolveCalc: true,
-    resolveProps: true,
-    safe: true,
-    shorthand: true,
-    sixHex: true,
-    tailwind: {},
+```ts [nuxt.config.ts]
+export default defineNuxtConfig({
+  modules: ["@nuxtwind/components"],
+  nuxtwind: {
+    // Module options
   },
-};
+});
 ```
 
 ```html

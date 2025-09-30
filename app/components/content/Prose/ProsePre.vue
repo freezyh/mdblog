@@ -48,7 +48,7 @@ function copyCode() {
   const lines = cw.value.querySelectorAll(".line");
   const nodeList = highlights.length ? highlights : lines;
   const textarea = document.createElement("textarea");
-  textarea.value = [...nodeList].map(el => el.innerText).join("");
+  textarea.value = [...nodeList].map(el => el.textContent).join("");
   document.body.appendChild(textarea);
   textarea.select();
   document.execCommand("copy");

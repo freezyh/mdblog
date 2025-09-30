@@ -1,3 +1,27 @@
+<script setup>
+const props = defineProps({
+  type: {
+    type: String,
+    default: "info",
+  },
+});
+
+const classes = computed(() => {
+  switch (props.type) {
+    case "success":
+      return "bg-green-500";
+    case "info":
+      return "bg-indigo-500";
+    case "warning":
+      return "bg-amber-300";
+    case "danger":
+      return "bg-rose-400";
+    default:
+      return "bg-indigo-500";
+  }
+});
+</script>
+
 <template>
   <div
     role="alert"
@@ -12,27 +36,3 @@
     </div>
   </div>
 </template>
-
-<script setup>
-const props = defineProps({
-  type: {
-    type: String,
-    default: 'info',
-  },
-})
-
-const classes = computed(() => {
-  switch (props.type) {
-    case 'success':
-      return 'bg-green-500'
-    case 'info':
-      return 'bg-indigo-500'
-    case 'warning':
-      return 'bg-amber-300'
-    case 'danger':
-      return 'bg-rose-400'
-    default:
-      return 'bg-indigo-500'
-  }
-})
-</script>

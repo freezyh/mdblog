@@ -17,8 +17,8 @@ export default defineNuxtConfig({
         highlight: {
           // Theme used in all color schemes.
           theme: {
-            default: "github-light",
-            dark: "github-dark",
+            default: "material-theme-lighter",
+            dark: "material-theme-ocean",
           },
         },
       },

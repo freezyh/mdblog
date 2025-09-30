@@ -1,3 +1,16 @@
+<script setup>
+defineProps({
+  asLink: {
+    type: String,
+    default: undefined,
+  },
+});
+
+const { public: runtimeConfig } = useRuntimeConfig();
+
+const release = runtimeConfig.latestRelease;
+</script>
+
 <template>
   <a
     v-if="asLink"
@@ -9,16 +22,3 @@
     v-text="release"
   />
 </template>
-
-<script setup>
-defineProps({
-  asLink: {
-    type: String,
-    default: undefined,
-  },
-})
-
-const {public: runtimeConfig} = useRuntimeConfig()
-
-const release = runtimeConfig.latestRelease
-</script>

@@ -63,7 +63,7 @@ abbr,
 
 /* Inline <code> */
 .prose :not(pre) code {
-  @apply px-1 py-0.5 rounded;
+  @apply px-1 py-1 rounded;
   @apply bg-slate-100 text-slate-700 font-normal;
   @apply before:content-none after:content-none;
 }

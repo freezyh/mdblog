@@ -23,9 +23,9 @@
     "vue-router": "^4.5.1"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^5.4.1",
+    "@antfu/eslint-config": "^6.0.0",
     "@types/node": "^24.3.0",
-    "eslint": "^9.32.0",
+    "eslint": "^9.37.0",
     "eslint-plugin-format": "^1.0.2",
     "postcss-html": "^1.8.0",
     "sass": "^1.90.0",

@@ -17,7 +17,7 @@ export default antfu(
     formatters: {
       css: true, // 启用 CSS 自动格式化
       html: true, // 启用 HTML 自动格式化
-      markdown: "prettier", // 使用 Prettier 格式化 Markdown
+      markdown: "dprint", // "prettier", // 使用 Prettier 格式化 Markdown
     },
 
     // ===== 语言支持 =====
@@ -39,13 +39,25 @@ export default antfu(
     files: ["​**​/*.ts"], // 匹配所有 .ts 文件
     rules: {}, // 可在此添加 TypeScript 特定规则
   },
-
+  {
+    files: ["**/*.html"],
+    rules: {
+      "no-irregular-whitespace": "off",
+    },
+  },
+  {
+    files: ["**/*.md"],
+    rules: {
+      "no-irregular-whitespace": "off",
+    },
+  },
   // ========== 全局规则覆盖 ==========
   {
     rules: {
       "no-unused-vars": "off", // 关闭未使用变量的检查
       "no-console": "off", // 允许使用 console
       "linebreak-style": "off", // 关闭行尾换行符检查
+      "htmlWhitespaceSensitivity": "ignore",
     },
   },
 );

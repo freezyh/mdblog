@@ -12,18 +12,18 @@ const { data: page } = await useAsyncData(route.path, () => {
 
 <template>
   <div>
-    首页
+    <!-- 首页 -->
     <!-- <div>
     <p>Count: {{ counter.count }}</p>
     <p>Double: {{ counter.doubleCount }}</p>
     <button @click="counter.increment()">Increment</button>
   </div> -->
-    <div class="test txt">
+    <!-- <div class="test txt">
       select
     </div>
     <div class="px-6">
       test
-    </div>
+    </div> -->
     <div class="prose">
       <ContentRenderer v-if="page" :value="page" />
     </div>

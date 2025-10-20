@@ -4,16 +4,17 @@ useSeoMeta({
   description: "描述",
 });
 /* const counter = useCounterStore(); */
-const route = useRoute();
+/* const route = useRoute();
 const { data: page } = await useAsyncData(route.path, () => {
   return queryCollection("docs").path(route.path).first();
-});
+}); */
 </script>
 
 <template>
   <div>
     <!-- 首页 -->
-    <!-- <div>
+     首页
+   <!--  <div>
     <p>Count: {{ counter.count }}</p>
     <p>Double: {{ counter.doubleCount }}</p>
     <button @click="counter.increment()">Increment</button>
@@ -24,9 +25,9 @@ const { data: page } = await useAsyncData(route.path, () => {
     <div class="px-6">
       test
     </div> -->
-    <div class="prose">
+    <!-- <div class="prose">
       <ContentRenderer v-if="page" :value="page" />
-    </div>
+    </div> -->
   </div>
 </template>
 

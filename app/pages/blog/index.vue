@@ -1,5 +1,5 @@
 <script setup lang="ts">
- 
+ import type { LinkMenu } from '~~/types'
 const route = useRoute()
 
 const { data: links, status } = await useAsyncData(route.path, async () => {
@@ -14,10 +14,10 @@ links.value = links.value.map((item: any) => {
   return {
     name: item.title,
     path: item.path,
-    date: item.year,
+    date: new Date(item.date).getTime(),
     description: item.description || '',
-  } 
-}).sort((a, b) => b.date - a.date)
+  } as LinkMenu
+}).sort((a, b) => b.date - a.date) 
 </script>
 
 <template>

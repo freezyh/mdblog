@@ -1,5 +1,5 @@
 <script setup lang="ts">
- import type { LinkMenu } from '~~/types'
+ import type { LinkMenu } from '~/types'
 const route = useRoute()
 
 const { data: links, status } = await useAsyncData(route.path, async () => {

@@ -5,7 +5,6 @@ date: 2025-10-20
 year: 2025
 ---
 
-
 # My First Page
 
 Here is some content.
@@ -32,7 +31,6 @@ export default defineNuxtConfig({
 
 表格111
 
-
 | 左对齐 | 右对齐 | 居中对齐 |
 | :----- | -----: | :------: |
 | 单元格 | 单元格 |  单元格  |
@@ -44,11 +42,18 @@ export default defineNuxtConfig({
 
 车辆信息：
 
-| 车型     | 颜色 |       报价 |
-| :------- | :--: | ---------: |
-| 法拉利   | 红色 |  500达不溜 |
-| 劳斯莱斯 | 金色 |  666达不溜 |
-| 布加迪   | 黑色 | 3246达不溜 |
+| 车型     | 颜色 |             报价 |
+| :------- | :--: | ---------------: |
+| 法拉利   | 红色 | 500达不溜500达不 |
+| 劳斯莱斯 | 金色 |        666达不溜 |
+| 布加迪   | 黑色 |       3246达不溜 |
+
+test
+
+| File                   | Command                                            |
+| ---------------------- | -------------------------------------------------- |
+| `config.js`            | `test build`<br>`test serve`                       |
+| `config.production.js` | `test build production`<br>`test serve production` |
 
 > 这里是引用
 
@@ -59,7 +64,8 @@ export default defineNuxtConfig({
 <u>我是下划线</u>
 
 ~~删除线~~
-<!-- 
+
+<!--
 ```html [layouts/main.html] diff {4-7}
 <!doctype html>
 <html>
@@ -74,6 +80,15 @@ export default defineNuxtConfig({
   </body>
 </html>
 ``` -->
+
+To use a specific version, first change the value to the desired release number:
+
+```json [package.json] {3} no-copy
+"dependencies": {
+   "@maizzle/framework": "latest", // [!code --]
+   "@maizzle/framework": "5.0.6", // [!code ++]
+}
+```
 
 <Alert>We don't recommend using `@tailwind base` because it contains CSS resets that won't work or are not needed in HTML emails. Also, some resets in there use the `*` selector, which can cause issues when CSS is inlined.</Alert>
 

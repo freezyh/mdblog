@@ -39,6 +39,8 @@ pm2 list
 pm2 describe 序号/名称
 ```
 
+<Alert type="danger">和[pm2 show 序号/名称]的命令一样，重点是可以查看日志保存的详细目录</Alert>
+
 ```bash [查看进程的资源消耗情况]
 pm2 monit
 ```

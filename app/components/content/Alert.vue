@@ -36,3 +36,9 @@ const classes = computed(() => {
     </div>
   </div>
 </template>
+
+<style lang="scss" scoped>
+.py-2 {
+  word-break: break-all;
+}
+</style>

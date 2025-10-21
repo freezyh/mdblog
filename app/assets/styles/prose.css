@@ -147,6 +147,7 @@ abbr,
 
 .prose .shiki .line {
   @apply block px-6;
+  white-space: pre-wrap;
 }
 
 .prose pre.shiki .line.highlight {

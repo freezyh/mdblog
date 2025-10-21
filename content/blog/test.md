@@ -59,7 +59,7 @@ export default defineNuxtConfig({
 <u>我是下划线</u>
 
 ~~删除线~~
-
+<!-- 
 ```html [layouts/main.html] diff {4-7}
 <!doctype html>
 <html>
@@ -73,7 +73,7 @@ export default defineNuxtConfig({
     <yield />
   </body>
 </html>
-```
+``` -->
 
 <Alert>We don't recommend using `@tailwind base` because it contains CSS resets that won't work or are not needed in HTML emails. Also, some resets in there use the `*` selector, which can cause issues when CSS is inlined.</Alert>
 

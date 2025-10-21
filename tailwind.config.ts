@@ -6,7 +6,7 @@ export default <Partial<Config>>{
       spacing: {
         0: "0px",
       },
-    },
+    }, 
   },
   content: [],
   plugins: [],

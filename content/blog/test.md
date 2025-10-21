@@ -77,4 +77,4 @@ export default defineNuxtConfig({
 
 <Alert>We don't recommend using `@tailwind base` because it contains CSS resets that won't work or are not needed in HTML emails. Also, some resets in there use the `*` selector, which can cause issues when CSS is inlined.</Alert>
 
-<Alert type="info">We don't recommend using `@tailwind base` because it contains CSS resets that won't work or are not needed in HTML emails. Also, some resets in there use the `*` selector, which can cause issues when CSS is inlined.</Alert>
+<Alert type="danger">We don't recommend using `@tailwind base` because it contains CSS resets that won't work or are not needed in HTML emails. Also, some resets in there use the `*` selector, which can cause issues when CSS is inlined.</Alert>

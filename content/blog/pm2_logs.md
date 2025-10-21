@@ -27,7 +27,7 @@ pm2 conf pm2-logrotate
 pm2 show pm2-logrotate
 ```
 
-```sh
+```bash
 //设置日志文件的最大大小为 10MB，也可以设置KB大小，例如pm2 set pm2-logrotate:max_size 100KB
 pm2 set pm2-logrotate:max_size 10M
 
@@ -49,7 +49,7 @@ pm2 set pm2-logrotate:rotateInterval '0 0 * * *'
 
 ### Cron表达式的基本格式
 
-```sh
+```bash
 * * * * * [command]
 - - - - -
 | | | | |

@@ -5,7 +5,7 @@ date: 2025-10-21 11:13:41
 year: 2025
 ---
 
-# pm2常用命令
+## pm2常用命令
 
 ```bash [重命名进程/应用]
 pm2 start app.js --name 名称

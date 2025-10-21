@@ -18,8 +18,8 @@ useSeoMeta({
 
 <style lang="scss" scoped>
 .prose {
-  width: 1000px;
   margin: 0 auto;
+  max-width: 680px;
 }
 .txt {
   user-select: none;

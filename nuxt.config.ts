@@ -15,7 +15,6 @@ export default defineNuxtConfig({
     build: {
       markdown: {
         highlight: {
-          // Theme used in all color schemes.
           theme: {
             default: "material-theme-lighter",
             dark: "material-theme-ocean",
@@ -53,6 +52,6 @@ export default defineNuxtConfig({
     prerender: {
       crawlLinks: true,
       autoSubfolderIndex: false,
-    }
-  }
+    },
+  },
 });

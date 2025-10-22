@@ -19,6 +19,10 @@ ps -ef | grep nginx
 
 <Alert type="danger">通过查看安装目录可以找到相应的配置文件所在目录，执行后显示`/usr/local/nginx/sbin/nginx`那么sbin前面的目录下可以查看配置，如果需要更改nginx的一些配置，此方法可以快速找到配置来更改，更改完以后需要重新加载服务：`/usr/local/nginx/sbin/nginx -s reload` 可能安装的目录不是/usr/local/nginx/sbin/nginx那就按实际的</Alert>
 
+```bash [查看当前路径]
+pwd
+```
+
 ```bash [创建 test 目录]
 mkdir test
 ```

@@ -48,10 +48,10 @@ export default defineNuxtConfig({
       },
     },
   },
-  nitro: {
+  /* nitro: {
     prerender: {
       crawlLinks: true,
       autoSubfolderIndex: false,
     },
-  },
+  }, */
 });

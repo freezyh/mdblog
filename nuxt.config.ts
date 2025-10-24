@@ -10,7 +10,7 @@ export default defineNuxtConfig({
     baseURL: "/mdblog/",
   },
   css: ["~/assets/styles/reset.css", "~/assets/styles/app.scss", "~/assets/styles/tailwind.css"],
-  modules: ["@nuxtjs/tailwindcss", "@nuxt/content", "@vueuse/nuxt", "@pinia/nuxt"],
+  modules: ["@element-plus/nuxt", "@nuxtjs/tailwindcss", "@nuxt/content", "@vueuse/nuxt", "@pinia/nuxt"],
   content: {
     build: {
       markdown: {
@@ -53,5 +53,10 @@ export default defineNuxtConfig({
       crawlLinks: true,
       autoSubfolderIndex: false,
     },
+  },
+  elementPlus: {
+    defaultLocale: "zh-cn",
+    icon: "ElIcon",
+    themes: ["dark"],
   },
 });

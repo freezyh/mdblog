@@ -26,7 +26,9 @@ useSeoMeta({
   <div>
     <NuxtLoadingIndicator />
     <NuxtLayout>
-      <NuxtPage />
+      <el-config-provider>
+        <NuxtPage :bind="$attrs" />
+      </el-config-provider>
     </NuxtLayout>
   </div>
 </template>

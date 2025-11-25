@@ -11,6 +11,12 @@ year: 2025
 netstat -tuln
 ```
 
+如果使用netstat提示command not found
+
+```bash [安装net-tools]
+yum install net-tools
+```
+
 <Alert type="danger">部署Nuxt项目的时候，可以通过查看端口号来排查项目是否启动成功</Alert>
 
 ```bash [查看nginx的安装目录]

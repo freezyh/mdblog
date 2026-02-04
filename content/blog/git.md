@@ -14,3 +14,7 @@ year: 2025
 
  ipconfig /flushdns
 ```
+
+```bash
+git config --global http.sslVerify false
+```

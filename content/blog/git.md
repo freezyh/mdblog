@@ -18,3 +18,12 @@ year: 2025
 ```bash
 git config --global http.sslVerify false
 ```
+
+```bash [看全局]
+git config --global -l
+```
+
+```bash [删除全局git]
+git config --global --unset user.name
+git config --global --unset user.email
+```

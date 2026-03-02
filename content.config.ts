@@ -26,7 +26,7 @@ export default defineContentConfig({
             alt: z.string()
           }).optional()
         })), */
-      })
+      }),
     }),
   },
 });

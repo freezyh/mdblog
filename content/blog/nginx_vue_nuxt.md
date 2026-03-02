@@ -17,19 +17,19 @@ year: 2025
     location = / {
         add_header Cache-Control no-cache;
         proxy_set_header   Cookie $http_cookie;
-        proxy_pass	http://127.0.0.1:8089;
+        proxy_pass        http://127.0.0.1:8089;
     }
 
     location ^~ /_nuxt/ {
         add_header Cache-Control no-cache;
         proxy_set_header   Cookie $http_cookie;
-        proxy_pass	http://127.0.0.1:8089;
+        proxy_pass        http://127.0.0.1:8089;
     }
 
     location /cms {
         add_header Cache-Control no-cache;
         proxy_set_header   Cookie $http_cookie;
-        proxy_pass	http://127.0.0.1:8089;
+        proxy_pass        http://127.0.0.1:8089;
     }
 
     location /api {

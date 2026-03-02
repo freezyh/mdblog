@@ -13,8 +13,8 @@ const { data: page } = await useAsyncData(route.path, () => {
 <template>
   <div>
     <!-- 首页 -->
-     首页
-   <!--  <div>
+    首页
+    <!--  <div>
     <p>Count: {{ counter.count }}</p>
     <p>Double: {{ counter.doubleCount }}</p>
     <button @click="counter.increment()">Increment</button>

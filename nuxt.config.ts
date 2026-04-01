@@ -12,9 +12,6 @@ export default defineNuxtConfig({
   css: ["~/assets/styles/reset.css", "~/assets/styles/app.scss", "~/assets/styles/tailwind.css"],
   modules: ["@element-plus/nuxt", "@nuxtjs/tailwindcss", "@nuxt/content", "@vueuse/nuxt", "@pinia/nuxt"],
   content: {
-    database: {
-      path: "/tmp/content.db",
-    },
     build: {
       markdown: {
         highlight: {

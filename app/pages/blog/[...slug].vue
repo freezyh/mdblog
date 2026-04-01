@@ -1,7 +1,9 @@
 <script setup lang="ts">
 const route = useRoute();
+const config = useRuntimeConfig();
 const { data: page } = await useAsyncData(route.path, () => {
-  return queryCollection("blog" as any).path(route.path).first();
+  const contentPath = route.path.replace(config.app.baseURL, "/");
+  return queryCollection("blog" as any).path(contentPath).first();
 });
 // console.log(page);
 useSeoMeta({

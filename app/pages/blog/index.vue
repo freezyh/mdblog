@@ -18,6 +18,7 @@ links.value = (links.value as any[]).map((item: any) => {
   } as LinkMenu;
 }).sort((a, b) => b.date - a.date);
 onMounted(() => {
+  console.log("调整");
   console.log(links);
 });
 </script>

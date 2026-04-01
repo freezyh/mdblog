@@ -6,9 +6,9 @@ export default defineNuxtConfig({
   compatibilityDate: "2025-07-15",
   devtools: { enabled: true },
   sourcemap: false,
-  /* app: {
-    baseURL: "/mdblog/",
-  }, */
+  app: {
+    baseURL: "/mdblog/", // 兼容发布到github
+  },
   css: ["~/assets/styles/reset.css", "~/assets/styles/app.scss", "~/assets/styles/tailwind.css"],
   modules: ["@element-plus/nuxt", "@nuxtjs/tailwindcss", "@nuxt/content", "@vueuse/nuxt", "@pinia/nuxt"],
   content: {
@@ -22,9 +22,9 @@ export default defineNuxtConfig({
         },
       },
     },
-    /* experimental: {
+    experimental: { // 发布到vercel必须添加
       nativeSqlite: true,
-    }, */
+    },
   },
 
   typescript: {

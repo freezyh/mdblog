@@ -22,9 +22,9 @@ export default defineNuxtConfig({
         },
       },
     },
-    experimental: {
+    /* experimental: {
       nativeSqlite: true,
-    },
+    }, */
   },
 
   typescript: {

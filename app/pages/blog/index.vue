@@ -2,7 +2,7 @@
 import type { LinkMenu } from "~/types";
 
 const { data: links } = await useAsyncData<LinkMenu[]>("blog-list", () => {
-  return queryCollection("blog" as any).all();
+  return queryCollection("blogs" as any).all();
 });
 
 if (!links.value) {

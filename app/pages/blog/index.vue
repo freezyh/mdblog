@@ -1,23 +1,15 @@
 <script setup lang="ts">
 import type { LinkMenu } from "~/types";
 
-const route = useRoute();
-
-const { data: links } = await useAsyncData("blog-list", async () => {
-  try {
-    return await queryCollection("blog" as any).all();
-  }
-  catch (e) {
-    console.error("queryCollection error:", e);
-    return [];
-  }
+const { data: links } = await useAsyncData<LinkMenu[]>("blog-list", () => {
+  return queryCollection("blog" as any).all();
 });
 
-if (!links.value || links.value.length === 0) {
-  throw createError({ statusCode: 404, statusMessage: `Page not found: ${route.path}`, fatal: true });
+if (!links.value) {
+  throw createError({ statusCode: 404, statusMessage: "Blog content not loaded" });
 }
 
-links.value = links.value.map((item: any) => {
+links.value = (links.value as any[]).map((item: any) => {
   return {
     name: item.title,
     path: item.path,

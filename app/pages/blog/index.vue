@@ -17,12 +17,17 @@ links.value = (links.value as any[]).map((item: any) => {
     description: item.description || "",
   } as LinkMenu;
 }).sort((a, b) => b.date - a.date);
+onMounted(() => {
+  console.log(links);
+});
 </script>
 
 <template>
-  <NuxtLink v-for="(item, index) in links" :key="index" class="link" :to="item.path">
-    {{ item.name }}
-  </NuxtLink>
+  <div>
+    <NuxtLink v-for="(item, index) in links" :key="index" class="link" :to="item.path">
+      {{ item.name }}
+    </NuxtLink>
+  </div>
 </template>
 
 <style lang="scss" scoped>

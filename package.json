@@ -17,7 +17,7 @@
     "@nuxtjs/tailwindcss": "^6.14.0",
     "@pinia/nuxt": "^0.11.2",
     "@vueuse/nuxt": "^13.6.0",
-    "better-sqlite3": "^12.4.1",
+    "better-sqlite3": "^12.6.2",
     "echarts": "^6.0.0",
     "nuxt": "^4.0.1",
     "pinia": "^3.0.3",

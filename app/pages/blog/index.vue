@@ -7,16 +7,18 @@ const { data: links/* , status */ } = await useAsyncData(route.path, async () =>
   return await queryCollection("blog" as any).all();
 });
 
-if (links.value) {
-  links.value = links.value.map((item: any) => {
-    return {
-      name: item.title,
-      path: item.path,
-      date: new Date(item.date).getTime(),
-      description: item.description || "",
-    } as LinkMenu;
-  }).sort((a, b) => b.date - a.date);
+if (!links.value) {
+  throw createError({ statusCode: 404, statusMessage: `Page not found: ${route.path}`, fatal: true });
 }
+
+links.value = links.value.map((item: any) => {
+  return {
+    name: item.title,
+    path: item.path,
+    date: new Date(item.date).getTime(),
+    description: item.description || "",
+  } as LinkMenu;
+}).sort((a, b) => b.date - a.date);
 </script>
 
 <template>

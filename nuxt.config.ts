@@ -6,9 +6,9 @@ export default defineNuxtConfig({
   compatibilityDate: "2025-07-15",
   devtools: { enabled: true },
   sourcemap: false,
-  app: {
+  /* app: {
     baseURL: "/mdblog/",
-  },
+  }, */
   css: ["~/assets/styles/reset.css", "~/assets/styles/app.scss", "~/assets/styles/tailwind.css"],
   modules: ["@element-plus/nuxt", "@nuxtjs/tailwindcss", "@nuxt/content", "@vueuse/nuxt", "@pinia/nuxt"],
   content: {
@@ -51,7 +51,7 @@ export default defineNuxtConfig({
   nitro: {
     prerender: {
       crawlLinks: true,
-      autoSubfolderIndex: false,
+      /* autoSubfolderIndex: false, */
     },
   },
   elementPlus: {

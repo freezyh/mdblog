@@ -11,7 +11,7 @@ export default defineNuxtConfig({
   }, */
   css: ["~/assets/styles/reset.css", "~/assets/styles/app.scss", "~/assets/styles/tailwind.css"],
   modules: ["@element-plus/nuxt", "@nuxtjs/tailwindcss", "@nuxt/content", "@vueuse/nuxt", "@pinia/nuxt"],
-  /* content: {
+  content: {
     build: {
       markdown: {
         highlight: {
@@ -22,19 +22,11 @@ export default defineNuxtConfig({
         },
       },
     },
-  }, */
-  content: {
-    build: {
-      markdown: {
-        highlight: {
-          theme: "github-dark",
-        },
-      },
-    },
     experimental: {
       nativeSqlite: true,
     },
   },
+
   typescript: {
     strict: true,
   },
@@ -63,7 +55,7 @@ export default defineNuxtConfig({
   nitro: {
     prerender: {
       crawlLinks: true,
-      /* autoSubfolderIndex: false, */
+      autoSubfolderIndex: false,
     },
   },
   elementPlus: {

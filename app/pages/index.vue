@@ -4,7 +4,7 @@ useSeoMeta({
   description: "描述",
 });
 
-const skillsData = ref<any[]>([]);
+const skillsData = ref<{ name: string; category: string; icon: string }[]>([]);
 const loading = ref(false);
 const error = ref<string | null>(null);
 
@@ -12,7 +12,7 @@ async function fetchSkills() {
   loading.value = true;
   error.value = null;
   try {
-    skillsData.value = await $fetch("/api/skills");
+    skillsData.value = await $fetch<{ name: string; category: string; icon: string }[]>("/api/skills");
   }
   catch {
     error.value = "请求失败";
@@ -30,11 +30,24 @@ const addLoading = ref(false);
 async function fetchAdd() {
   addLoading.value = true;
   try {
-    const res = await $fetch("/api/add", {
+    const res = await $fetch<{ result: number }>("/api/add", {
       method: "POST",
       body: { a: numA.value, b: numB.value },
     });
     addResult.value = res.result;
+  }
+  finally {
+    addLoading.value = false;
+  }
+}
+
+async function fetchXhs() {
+  addLoading.value = true;
+  try {
+    const res = await $fetch<{ result: any }>("/api/xhs", {
+      method: "get",
+    });
+    console.log(res);
   }
   finally {
     addLoading.value = false;
@@ -80,6 +93,14 @@ async function fetchAdd() {
         = {{ addResult }}
       </span>
     </div>
+
+    <button
+      class="px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600"
+      :disabled="addLoading"
+      @click="fetchXhs"
+    >
+      小红书
+    </button>
   </div>
 </template>
 

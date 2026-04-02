@@ -3,31 +3,83 @@ useSeoMeta({
   title: "我的网站",
   description: "描述",
 });
-/* const counter = useCounterStore(); */
-/* const route = useRoute();
-const { data: page } = await useAsyncData(route.path, () => {
-  return queryCollection("docs").path(route.path).first();
-}); */
+
+const skillsData = ref<any[]>([]);
+const loading = ref(false);
+const error = ref<string | null>(null);
+
+async function fetchSkills() {
+  loading.value = true;
+  error.value = null;
+  try {
+    skillsData.value = await $fetch("/api/skills");
+  }
+  catch {
+    error.value = "请求失败";
+  }
+  finally {
+    loading.value = false;
+  }
+}
+
+const numA = ref(0);
+const numB = ref(0);
+const addResult = ref<number | null>(null);
+const addLoading = ref(false);
+
+async function fetchAdd() {
+  addLoading.value = true;
+  try {
+    const res = await $fetch("/api/add", {
+      method: "POST",
+      body: { a: numA.value, b: numB.value },
+    });
+    addResult.value = res.result;
+  }
+  finally {
+    addLoading.value = false;
+  }
+}
 </script>
 
 <template>
   <div>
     <!-- 首页 -->
     首页
-    <!--  <div>
-    <p>Count: {{ counter.count }}</p>
-    <p>Double: {{ counter.doubleCount }}</p>
-    <button @click="counter.increment()">Increment</button>
-  </div> -->
-    <!-- <div class="test txt">
-      select
+    <button
+      class="ml-4 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
+      :disabled="loading"
+      @click="fetchSkills"
+    >
+      {{ loading ? "加载中..." : "获取 Skills" }}
+    </button>
+
+    <!-- Skills 数据展示 -->
+    <div v-if="error" class="mt-4 text-red-500">
+      {{ error }}
     </div>
-    <div class="px-6">
-      test
-    </div> -->
-    <!-- <div class="prose">
-      <ContentRenderer v-if="page" :value="page" />
-    </div> -->
+    <div v-else-if="skillsData.length" class="mt-4">
+      <div v-for="skill in skillsData" :key="skill.name" class="py-1">
+        {{ skill.name }} - {{ skill.category }}
+      </div>
+    </div>
+
+    <!-- 计算器 -->
+    <div class="mt-8 flex items-center gap-2">
+      <input v-model="numA" type="number" class="border p-2 rounded w-24">
+      <span>+</span>
+      <input v-model="numB" type="number" class="border p-2 rounded w-24">
+      <button
+        class="px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600"
+        :disabled="addLoading"
+        @click="fetchAdd"
+      >
+        {{ addLoading ? "计算中..." : "计算" }}
+      </button>
+      <span v-if="addResult !== null" class="ml-2 font-bold">
+        = {{ addResult }}
+      </span>
+    </div>
   </div>
 </template>
 

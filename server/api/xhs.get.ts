@@ -1,5 +1,5 @@
-export default defineEventHandler(async (): Promise<any> => {
-  return await $fetch("https://oooooooooooooo.xiangmuchan.cn/api/auth.php", {
+export default defineEventHandler(async (event): Promise<any> => {
+  const response = await $fetch("https://oooooooooooooo.xiangmuchan.cn/api/auth.php", {
     method: "POST",
     headers: {
       Cookie: "MGXCX_SESSID=nbaf5pvv9m5v3oo3ru9kqaak50; server_name_session=7e2401bb60f91bc4420a286dcbc8e873; PHPSESSID=een00aeom5dggjis0c73e3t6k3",
@@ -19,4 +19,12 @@ export default defineEventHandler(async (): Promise<any> => {
       type: "normal",
     },
   });
+
+  // 添加 CORS 头
+  appendCorsHeaders(event, {
+    origin: "*",
+    methods: ["GET", "POST", "OPTIONS"],
+  });
+
+  return response;
 });

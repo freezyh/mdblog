@@ -9,6 +9,10 @@ export default defineNuxtConfig({
   app: {
     baseURL: "/mdblog/", // 兼容发布到github
   },
+  devServer: {
+    host: "0.0.0.0",
+    port: 3000,
+  },
   css: ["~/assets/styles/reset.css", "~/assets/styles/app.scss", "~/assets/styles/tailwind.css"],
   modules: ["@element-plus/nuxt", "@nuxtjs/tailwindcss", "@nuxt/content", "@vueuse/nuxt", "@pinia/nuxt"],
   content: {

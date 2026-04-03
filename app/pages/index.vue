@@ -53,6 +53,17 @@ async function fetchXhs() {
     addLoading.value = false;
   }
 }
+async function fetchVerify() {
+  try {
+    const res = await $fetch<{ result: any }>("/api/xhs-verify", {
+      method: "post",
+    });
+    console.log(res);
+  }
+  finally {
+    addLoading.value = false;
+  }
+}
 </script>
 
 <template>
@@ -100,6 +111,13 @@ async function fetchXhs() {
       @click="fetchXhs"
     >
       小红书
+    </button>
+    <button
+      class="px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600"
+      :disabled="addLoading"
+      @click="fetchVerify"
+    >
+      获取配置
     </button>
   </div>
 </template>

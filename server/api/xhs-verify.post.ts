@@ -3,6 +3,10 @@ import crypto from "node:crypto";
 const APP_KEY = "red.gLvsVoksierVz0uF";
 const APP_SECRET = "f13a2266d1e2c32a553cb7a42ea63c48";
 
+// 备用
+/* const APP_KEY = "red.jdTVXR4Ldj9sudhb";
+const APP_SECRET = "e01fca2788b5d8097d76fbec72615e00"; */
+
 // 缓存 access_token
 let cachedToken: { token: string; expiresAt: number } | null = null;
 

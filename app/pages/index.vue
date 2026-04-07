@@ -53,6 +53,7 @@ async function fetchXhs() {
     addLoading.value = false;
   }
 }
+
 async function fetchVerify() {
   try {
     const res = await $fetch<{ result: any }>("/api/xhs-verify", {
@@ -62,6 +63,31 @@ async function fetchVerify() {
   }
   finally {
     addLoading.value = false;
+  }
+}
+
+// 抖音视频提取
+const douyinUrl = ref("");
+const douyinLoading = ref(false);
+
+async function fetchDouyin() {
+  /* if (!douyinUrl.value.trim()) {
+    console.log("请输入抖音视频链接");
+    return;
+  } */
+  douyinLoading.value = true;
+  try {
+    const res = await $fetch<any>("/api/douyin-video-extractor", {
+      method: "POST",
+      body: { url: douyinUrl.value },
+    });
+    console.log(res);
+  }
+  catch {
+    console.log("提取失败");
+  }
+  finally {
+    douyinLoading.value = false;
   }
 }
 </script>
@@ -119,6 +145,23 @@ async function fetchVerify() {
     >
       获取配置
     </button>
+
+    <!-- 抖音视频提取 -->
+    <div class="mt-8 flex items-center gap-2">
+      <input
+        v-model="douyinUrl"
+        type="text"
+        placeholder="请输入抖音视频链接"
+        class="border p-2 rounded w-80"
+      >
+      <button
+        class="px-4 py-2 bg-orange-500 text-white rounded hover:bg-orange-600"
+        :disabled="douyinLoading"
+        @click="fetchDouyin"
+      >
+        {{ douyinLoading ? "提取中..." : "提取抖音视频" }}
+      </button>
+    </div>
   </div>
 </template>
 

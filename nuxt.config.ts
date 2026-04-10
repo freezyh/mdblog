@@ -67,4 +67,20 @@ export default defineNuxtConfig({
     icon: "ElIcon",
     themes: ["dark"],
   },
+  /**
+   * Runtime Config
+   */
+  runtimeConfig: {
+    appEnv: "",
+    allowedOrigin: "",
+    internalApiSecret: "",
+    chatSessionSecret: "",
+    groqApiKey: "",
+    public: {
+      baseUrl: "",
+      sessionSecret: "",
+    },
+    /** 自定义环境标记，用于标识 SIT 环境 */
+    sitEnv: false,
+  },
 });

@@ -5,6 +5,7 @@
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
+    "sit": "npx dotenv-cli -e .env.sit -o -- nuxt dev",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "generate": "nuxt generate",
@@ -28,6 +29,7 @@
     "@antfu/eslint-config": "^6.0.0",
     "@tailwindcss/typography": "^0.5.19",
     "@types/node": "^24.3.0",
+    "dotenv-cli": "^11.0.0",
     "eslint": "^9.37.0",
     "eslint-plugin-format": "^1.0.2",
     "postcss-html": "^1.8.0",

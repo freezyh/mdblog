@@ -57,6 +57,7 @@ export default antfu(
       "no-unused-vars": "off", // 关闭未使用变量的检查
       "no-console": "off", // 允许使用 console
       "linebreak-style": "off", // 关闭行尾换行符检查
+      "node/prefer-global/process": "off", // 允许使用全局 process
       // "htmlWhitespaceSensitivity": "ignore",
     },
   },

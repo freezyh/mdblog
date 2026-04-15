@@ -7,6 +7,7 @@ useSeoMeta({
 const skillsData = ref<{ name: string; category: string; icon: string }[]>([]);
 const loading = ref(false);
 const error = ref<string | null>(null);
+const validateToken = ref("");
 
 async function fetchSkills() {
   loading.value = true;
@@ -90,6 +91,23 @@ async function fetchDouyin() {
     douyinLoading.value = false;
   }
 }
+
+function valideTokenFunc() {
+  $fetch("/api/validetoken", {
+    method: "POST",
+    body: { token: validateToken.value },
+  }).then((res) => {
+    console.log(res);
+  });
+}
+onMounted(() => {
+  $fetch("/api/session", {
+    method: "get",
+  }).then((res) => {
+    console.log(res);
+    validateToken.value = res.token;
+  });
+});
 </script>
 
 <template>
@@ -160,6 +178,22 @@ async function fetchDouyin() {
         @click="fetchDouyin"
       >
         {{ douyinLoading ? "提取中..." : "提取抖音视频" }}
+      </button>
+    </div>
+    <!-- 校验token -->
+    <div class="mt-8 flex items-center gap-2">
+      <input
+        v-model="validateToken"
+        type="text"
+        placeholder="请输入token"
+        class="border p-2 rounded w-80"
+      >
+      <button
+        class="px-4 py-2 bg-orange-500 text-white rounded hover:bg-orange-600"
+        :disabled="douyinLoading"
+        @click="valideTokenFunc"
+      >
+        校验
       </button>
     </div>
   </div>

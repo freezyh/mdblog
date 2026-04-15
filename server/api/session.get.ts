@@ -3,7 +3,9 @@ import { createHash } from "node:crypto";
 export default defineEventHandler((event) => {
   const config = useRuntimeConfig(event);
   const secret = config.chatSessionSecret;
+
   console.log(secret);
+
   if (!secret) {
     throw createError({
       statusCode: 500,

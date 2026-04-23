@@ -42,19 +42,6 @@ async function fetchAdd() {
   }
 }
 
-async function fetchXhs() {
-  addLoading.value = true;
-  try {
-    const res = await $fetch<{ result: any }>("/api/xhs", {
-      method: "get",
-    });
-    console.log(res);
-  }
-  finally {
-    addLoading.value = false;
-  }
-}
-
 async function fetchVerify() {
   try {
     const res = await $fetch<{ result: any }>("/api/xhs-verify", {
@@ -100,6 +87,7 @@ function valideTokenFunc() {
     console.log(res);
   });
 }
+
 onMounted(() => {
   $fetch("/api/session", {
     method: "get",
@@ -107,6 +95,38 @@ onMounted(() => {
     console.log(res);
     validateToken.value = res.token;
   });
+});
+
+// 小红书轮询
+const isPolling = ref(false);
+
+const { loading: xhsLoading, error: xhsError, start: startPolling, stop: stopPolling } = usePolling(
+  async (signal) => {
+    return await $fetch<any>("/api/session", { signal }); // /api/xhs
+  },
+  5000,
+  {
+    onSuccess: (res) => {
+      console.log("轮询成功:", res);
+    },
+    onError: (err) => {
+      console.error("轮询失败:", err);
+    },
+  },
+);
+
+function togglePolling() {
+  if (isPolling.value) {
+    stopPolling();
+  }
+  else {
+    startPolling();
+  }
+  isPolling.value = !isPolling.value;
+}
+
+onUnmounted(() => {
+  stopPolling();
 });
 </script>
 
@@ -152,17 +172,19 @@ onMounted(() => {
     <button
       class="px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600"
       :disabled="addLoading"
-      @click="fetchXhs"
-    >
-      小红书
-    </button>
-    <button
-      class="px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600"
-      :disabled="addLoading"
       @click="fetchVerify"
     >
       获取配置
     </button>
+    <button
+      class="ml-2 px-4 py-2 rounded text-white"
+      :class="isPolling ? 'bg-red-500 hover:bg-red-600' : 'bg-blue-500 hover:bg-blue-600'"
+      @click="togglePolling"
+    >
+      {{ isPolling ? "停止轮询" : "开始轮询" }}
+    </button>
+    <span v-if="xhsLoading" class="ml-2 text-gray-500">轮询中...</span>
+    <span v-if="xhsError" class="ml-2 text-red-500">轮询错误</span>
 
     <!-- 抖音视频提取 -->
     <div class="mt-8 flex items-center gap-2">

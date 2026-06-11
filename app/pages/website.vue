@@ -98,15 +98,17 @@ const categories: Category[] = [
 </script>
 
 <template>
-  <div class="relative min-h-screen overflow-hidden bg-slate-50 py-6">
+  <div class="relative min-h-screen overflow-hidden bg-gradient-to-br from-slate-100 via-indigo-50 to-sky-50 py-6">
     <!-- 点阵网格 -->
     <div class="pointer-events-none absolute inset-0 opacity-[0.04]" style="background-image: radial-gradient(circle, #6366f1 1px, transparent 1px); background-size: 20px 20px;" />
     <!-- 斜线扫描线 -->
     <div class="pointer-events-none absolute inset-0 opacity-[0.015]" style="background: repeating-linear-gradient(45deg, #6366f1 0px, #6366f1 1px, transparent 1px, transparent 30px);" />
     <!-- 装饰光斑 -->
     <div class="pointer-events-none absolute -top-32 -left-32 h-80 w-80 rounded-full bg-indigo-200/30 blur-3xl" />
-    <div class="pointer-events-none absolute -bottom-32 -right-32 h-72 w-72 rounded-full bg-sky-200/25 blur-3xl" />
-    <div class="pointer-events-none absolute top-1/3 right-1/4 h-64 w-64 rounded-full bg-violet-200/20 blur-3xl" />
+    <div class="pointer-events-none absolute -bottom-32 -right-32 h-72 w-72 rounded-full bg-sky-200/30 blur-3xl" />
+    <div class="pointer-events-none absolute top-1/3 right-1/4 h-64 w-64 rounded-full bg-violet-200/25 blur-3xl" />
+    <div class="pointer-events-none absolute top-2/3 left-1/3 h-56 w-56 rounded-full bg-amber-200/20 blur-3xl" />
+    <div class="pointer-events-none absolute bottom-1/4 right-1/3 h-48 w-48 rounded-full bg-emerald-200/20 blur-3xl" />
 
     <div class="relative mx-auto max-w-7xl px-6">
       <!-- 分类区域 -->
@@ -125,7 +127,7 @@ const categories: Category[] = [
               :href="site.url"
               target="_blank"
               rel="noopener noreferrer"
-              class="group relative overflow-hidden rounded-lg bg-white px-4 py-3 shadow-[0_0_0_1px_rgba(148,163,184,0.12),0_1px_2px_rgba(0,0,0,0.04)] transition-all duration-200 hover:bg-indigo-50/50 hover:shadow-[0_0_0_1px_rgba(99,102,241,0.25),0_4px_12px_rgba(99,102,241,0.08)]"
+              class="group relative overflow-hidden rounded-lg bg-white px-4 py-3 shadow-[0_0_0_1px_rgba(148,163,184,0.12),0_1px_2px_rgba(0,0,0,0.04)] transition-all duration-300 hover:-translate-y-1 hover:bg-indigo-50/50 hover:shadow-[0_0_0_1px_rgba(99,102,241,0.25),0_4px_12px_rgba(99,102,241,0.08)]"
             >
               <!-- 名称 -->
               <p class="text-sm text-center font-medium text-slate-700 transition-colors group-hover:text-indigo-500">

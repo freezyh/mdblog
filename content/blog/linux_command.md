@@ -44,3 +44,15 @@ cd test
 ```bash [把 test 目录改成 test2 名称]
 mv test test2
 ```
+
+```bash [安装unzip]
+yum install unzip -y
+```
+
+```bash [解压 test.zip 到当前目录]
+unizip test.zip
+```
+
+```bash [解压 dist.zip 到当前目录下的manage目录下]
+unizip dist.zip -d manage
+```

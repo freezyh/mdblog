@@ -21,6 +21,7 @@ const categories: Category[] = [
       { name: "JSON格式化", url: "https://www.hijson.com/", desc: "json格式化" },
       { name: "TinyPNG", url: "https://tinypng.com", desc: "图片压缩" },
       { name: "apifox", url: "https://app.apifox.com", desc: "API调试" },
+      { name: "草料二维码", url: "https://cli.im", desc: "二维码生成" },
     ],
   },
   {
@@ -64,7 +65,9 @@ const categories: Category[] = [
     sites: [
       { name: "Stackblitz", url: "https://stackblitz.com", desc: "在线IDE" },
       { name: "Typescript", url: "https://www.typescriptlang.org/zh/play/", desc: "typescript转换" },
-      { name: "tailwindcss", url: "https://tailwindcss.com/docs/installation/using-vite", desc: "css" },
+      { name: "tailwindcss", url: "https://www.tailwindcss.cn/docs/installation", desc: "css" },
+      { name: "xicons", url: "https://xicons.org/", desc: "icon" },
+      { name: "iconify", url: "https://icon-sets.iconify.design/", desc: "icon" },
     ],
   },
   {
@@ -83,8 +86,11 @@ const categories: Category[] = [
     ],
   },
   {
-    name: "辅助软件",
+    name: "软件/工具",
     sites: [
+      { name: "Snipaste", url: "https://www.snipaste.com/", desc: "截图/取色" },
+      { name: "FSCapture", url: "https://pan.baidu.com/s/1nZEFDbcuVAjAUyhutEvl_Q?pwd=wx8g", desc: "截图/取色" },
+      { name: "Whistie", url: "https://wproxy.org/", desc: "代理抓包工具" },
       { name: "超级炸弹", url: "https://xn--31t720bz9j7oo.com", desc: "代理" },
       { name: "墙裂", url: "https://www.qianglie.com", desc: "代理" },
     ],

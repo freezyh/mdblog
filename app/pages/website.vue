@@ -99,7 +99,7 @@ const categories: Category[] = [
 </script>
 
 <template>
-  <div class="relative min-h-screen overflow-hidden bg-slate-50 py-12">
+  <div class="relative min-h-screen overflow-hidden bg-slate-50 py-6">
     <!-- 点阵网格 -->
     <div class="pointer-events-none absolute inset-0 opacity-[0.04]" style="background-image: radial-gradient(circle, #6366f1 1px, transparent 1px); background-size: 20px 20px;" />
     <!-- 斜线扫描线 -->
@@ -111,10 +111,10 @@ const categories: Category[] = [
 
     <div class="relative mx-auto max-w-7xl px-6">
       <!-- 分类区域 -->
-      <div class="space-y-8">
+      <div class="space-y-4">
         <section v-for="category in categories" :key="category.name">
           <!-- 分类标题 -->
-          <h2 class="mb-4 text-sm uppercase tracking-widest text-slate-400">
+          <h2 class="mb-2 text-sm uppercase tracking-widest text-slate-400">
             {{ category.name }}
           </h2>
 

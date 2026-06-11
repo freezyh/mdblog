@@ -34,6 +34,8 @@ const categories: Category[] = [
       { name: "豆包", url: "https://www.doubao.com/chat/", desc: "AI" },
       { name: "Deepseek", url: "https://chat.deepseek.com/", desc: "AI" },
       { name: "新浪微博", url: "https://weibo.com/newlogin", desc: "微博" },
+      { name: "微信公众平台", url: "https://mp.weixin.qq.com", desc: "微信" },
+      { name: "蓝湖", url: "https://lanhuapp.com", desc: "设计" },
 
     ],
   },

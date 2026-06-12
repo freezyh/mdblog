@@ -34,6 +34,7 @@ const categories: Category[] = [
       { name: "小皮面板", url: "https://www.xp.cn/term", desc: "服务器领域" },
       { name: "豆包", url: "https://www.doubao.com/chat/", desc: "AI" },
       { name: "Deepseek", url: "https://chat.deepseek.com/", desc: "AI" },
+      { name: "MDblog", url: "https://freezyh.vercel.app/mdblog/blog", desc: "笔记" },
       { name: "新浪微博", url: "https://weibo.com/newlogin", desc: "微博" },
       { name: "微信公众平台", url: "https://mp.weixin.qq.com", desc: "微信" },
       { name: "蓝湖", url: "https://lanhuapp.com", desc: "设计" },
@@ -93,7 +94,8 @@ const categories: Category[] = [
       { name: "Whistie", url: "https://wproxy.org/", desc: "代理抓包工具" },
       { name: "7-Zip", url: "https://sparanoid.com/lab/7z/", desc: "压缩软件" },
       { name: "Git", url: "https://git-scm.com", desc: "版本控制系统" },
-      { name: "TortoiseGit", url: "https://git-scm.com", desc: " Git图形化客户端" },
+      { name: "TortoiseGit", url: "https://git-scm.com", desc: "Git图形化客户端" },
+      { name: "UniApp", url: "https://uniapp.dcloud.net.cn/component/", desc: "开发框架" },
       { name: "超级炸弹", url: "https://xn--31t720bz9j7oo.com", desc: "代理" },
       { name: "墙裂", url: "https://www.qianglie.com", desc: "代理" },
     ],
@@ -109,7 +111,7 @@ const categories: Category[] = [
 </script>
 
 <template>
-  <div class="relative min-h-screen overflow-hidden bg-gradient-to-br from-slate-100 via-indigo-50 to-sky-50 py-6">
+  <div class="relative min-h-screen overflow-hidden bg-gradient-to-br from-slate-100 via-indigo-50 to-sky-50 py-3">
     <!-- 点阵网格 -->
     <div class="pointer-events-none absolute inset-0 opacity-[0.04]" style="background-image: radial-gradient(circle, #6366f1 1px, transparent 1px); background-size: 20px 20px;" />
     <!-- 斜线扫描线 -->
@@ -122,6 +124,10 @@ const categories: Category[] = [
     <div class="pointer-events-none absolute bottom-1/4 right-1/3 h-48 w-48 rounded-full bg-emerald-200/20 blur-3xl" />
 
     <div class="relative mx-auto max-w-7xl px-6">
+      <!-- 提示 -->
+      <p class="mb-4 text-center text-xs text-slate-400">
+        点击卡片在新标签页打开对应网站
+      </p>
       <!-- 分类区域 -->
       <div class="space-y-4">
         <section v-for="category in categories" :key="category.name">
@@ -152,11 +158,6 @@ const categories: Category[] = [
           </div>
         </section>
       </div>
-
-      <!-- 底部 -->
-      <p class="mt-12 text-center text-xs text-slate-300">
-        点击卡片在新标签页打开对应网站
-      </p>
     </div>
   </div>
 </template>

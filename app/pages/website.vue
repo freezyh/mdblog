@@ -31,7 +31,8 @@ const categories: Category[] = [
       { name: "码云", url: "https://gitee.com", desc: "代码托管平台" },
       { name: "百度网盘", url: "http://pan.baidu.com", desc: "网盘" },
       { name: "Google", url: "https://www.google.com", desc: "搜索引擎" },
-      { name: "小皮面板", url: "https://www.xp.cn/term", desc: "服务器领域" },
+      { name: "小皮面板", url: "https://www.xp.cn/term", desc: "服务器运维" },
+      { name: "宝塔面板", url: "https://www.bt.cn", desc: "服务器运维" },
       { name: "豆包", url: "https://www.doubao.com/chat/", desc: "AI" },
       { name: "Deepseek", url: "https://chat.deepseek.com/", desc: "AI" },
       { name: "MDblog", url: "https://freezyh.vercel.app/mdblog/blog", desc: "笔记" },
@@ -79,14 +80,6 @@ const categories: Category[] = [
     ],
   },
   {
-    name: "免费CDN服务",
-    sites: [
-      { name: "CDNJS", url: "https://cdnjs.com", desc: "cdn加速" },
-      { name: "bootcdn", url: "https://www.bootcdn.cn", desc: "cdn加速" },
-      { name: "七牛云", url: "https://staticfile.org", desc: "cdn加速" },
-    ],
-  },
-  {
     name: "软件/工具",
     sites: [
       { name: "Snipaste", url: "https://www.snipaste.com/", desc: "截图/取色" },
@@ -98,6 +91,14 @@ const categories: Category[] = [
       { name: "UniApp", url: "https://uniapp.dcloud.net.cn/component/", desc: "开发框架" },
       { name: "超级炸弹", url: "https://xn--31t720bz9j7oo.com", desc: "代理" },
       { name: "墙裂", url: "https://www.qianglie.com", desc: "代理" },
+    ],
+  },
+  {
+    name: "免费CDN服务",
+    sites: [
+      { name: "CDNJS", url: "https://cdnjs.com", desc: "cdn加速" },
+      { name: "bootcdn", url: "https://www.bootcdn.cn", desc: "cdn加速" },
+      { name: "七牛云", url: "https://staticfile.org", desc: "cdn加速" },
     ],
   },
   {
@@ -125,7 +126,7 @@ const categories: Category[] = [
 
     <div class="relative mx-auto max-w-7xl px-6">
       <!-- 提示 -->
-      <p class="mb-4 text-center text-xs text-slate-400">
+      <p class="mb-2 text-center text-xs text-slate-400">
         点击卡片在新标签页打开对应网站
       </p>
       <!-- 分类区域 -->

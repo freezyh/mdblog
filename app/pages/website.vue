@@ -45,11 +45,11 @@ const categories: Category[] = [
   {
     name: "博客平台",
     sites: [
-      { name: "掘金", url: "https://juejin.cn", desc: "开发者社区" },
       { name: "博客园", url: "https://www.cnblogs.com", desc: "开发者社区" },
       { name: "CSDN", url: "https://www.csdn.net", desc: "开发者社区" },
       { name: "DevPress", url: "https://devpress.csdn.net/vue", desc: "开发者社区" },
       { name: "DEV", url: "https://dev.to", desc: "开发者社区" },
+      { name: "掘金", url: "https://juejin.cn", desc: "开发者社区" },
     ],
   },
   {

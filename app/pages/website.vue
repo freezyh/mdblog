@@ -87,7 +87,7 @@ const categories: Category[] = [
       { name: "Whistie", url: "https://wproxy.org/", desc: "代理抓包工具" },
       { name: "7-Zip", url: "https://sparanoid.com/lab/7z/", desc: "压缩软件" },
       { name: "Git", url: "https://git-scm.com", desc: "版本控制系统" },
-      { name: "TortoiseGit", url: "https://git-scm.com", desc: "Git图形化客户端" },
+      { name: "TortoiseGit", url: "https://tortoisegit.org", desc: "Git图形化客户端" },
       { name: "UniApp", url: "https://uniapp.dcloud.net.cn/component/", desc: "开发框架" },
       { name: "超级炸弹", url: "https://xn--31t720bz9j7oo.com", desc: "代理" },
       { name: "墙裂", url: "https://www.qianglie.com", desc: "代理" },

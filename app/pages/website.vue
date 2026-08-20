@@ -39,6 +39,7 @@ const categories: Category[] = [
       { name: "新浪微博", url: "https://weibo.com/newlogin", desc: "微博" },
       { name: "微信公众平台", url: "https://mp.weixin.qq.com", desc: "微信" },
       { name: "蓝湖", url: "https://lanhuapp.com", desc: "设计" },
+      { name: "Wolfram Alpha", url: "https://www.wolframalpha.com/", desc: "生成图表" },
 
     ],
   },

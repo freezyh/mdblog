@@ -70,6 +70,7 @@ const categories: Category[] = [
       { name: "tailwindcss", url: "https://www.tailwindcss.cn/docs/installation", desc: "css" },
       { name: "xicons", url: "https://xicons.org/", desc: "icon" },
       { name: "iconify", url: "https://icon-sets.iconify.design/", desc: "icon" },
+      { name: "snippet", url: "https://snippet-generator.app/?description=&tabtrigger=&snippet=&mode=vscode", desc: "生成snippet" },
     ],
   },
   {

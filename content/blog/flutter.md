@@ -26,7 +26,7 @@ repositories {
 }
 ```
 
-3. E:\study\demoflutter\android\build.gradle
+#### 3. E:\study\demoflutter\android\build.gradle
 
 ```bash
 allprojects {

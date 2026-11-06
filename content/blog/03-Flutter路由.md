@@ -1,9 +1,9 @@
 ---
-title: 03 · Flutter 路由
-description: Flutter 路由
+title: 03 · Flutter 路由（普通路由 / 命名路由 / 传参 / 替换）
+description: Flutter 路由案例
 date: 2026-11-6
 year: 2026
-moddifyDate: "2026-11-6 10:27:05"
+moddifyDate: 2026-11-6 14:20:14
 ---
 
 # 03 · Flutter 路由（普通路由 / 命名路由 / 传参 / 替换）

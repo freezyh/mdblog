@@ -1,12 +1,12 @@
 ---
-title: Flutter在windows环境下vscode 按F5的时候构建慢问题
+title: Flutter在windows环境下vscode 按F5调试构建慢问题
 description: flutter常见问题
-date: "\"\\\"2026-10-26 17:33:08\\\"\""
+date: 2026-10-26
 year: 2026
-moddifyDate: 2026-11-6 13:58:55
+moddifyDate: 2026-11-6 14:18:01
 ---
 
-# Flutter在windows环境下vscode 按F5的时候构建慢问题
+# Flutter在windows环境下vscode 按F5调试构建慢问题
 
 #### 1.E:\study\demoflutter\android\settings.gradle.kts
 

@@ -1,9 +1,9 @@
 ---
 title: Nginx配置打包的Vue项目并配置Nuxt重构的路由
 description: Nginx配置打包的Vue项目并配置Nuxt重构的路由
-date: "\"\\\"2025-10-22 14:58:34\\\"\""
+date: 2025-10-22
 year: 2025
-moddifyDate: 2026-11-6 13:58:42
+moddifyDate: 2026-11-6 13:59:39
 ---
 
 # Nginx配置打包的Vue项目并配置Nuxt重构的路由

@@ -1,9 +1,9 @@
 ---
 title: linux常用命令
 description: linux常用命令
-date: "\"\\\"2025-10-21 17:10:25\\\"\""
+date: 2025-10-21
 year: 2025
-moddifyDate: 2026-11-6 13:58:48
+moddifyDate: 2026-11-6 13:59:39
 ---
 
 # linux常用命令

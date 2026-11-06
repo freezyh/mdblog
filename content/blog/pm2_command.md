@@ -1,9 +1,9 @@
 ---
 title: pm2常用命令
 description: pm2常用命令
-date: "\"\\\"2025-10-21 11:13:41\\\"\""
+date: 2025-10-21
 year: 2025
-moddifyDate: 2026-11-6 13:58:31
+moddifyDate: 2026-11-6 13:59:39
 ---
 
 # pm2常用命令

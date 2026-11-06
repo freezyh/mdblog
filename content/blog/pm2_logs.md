@@ -1,9 +1,9 @@
 ---
 title: pm2日志分割插件pm2-logrotate
 description: pm2日志分割插件pm2-logrotate
-date: "\"\\\"2025-10-21 11:15:16\\\"\""
+date: 2025-10-21
 year: 2025
-moddifyDate: 2026-11-6 13:58:27
+moddifyDate: 2026-11-6 13:59:39
 ---
 
 # pm2日志分割插件pm2-logrotate

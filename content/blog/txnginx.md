@@ -1,9 +1,9 @@
 ---
 title: nginx 安装
 description: 腾讯云服务器nginx
-date: "\"2026-10-30 11:56:36\""
+date: 2026-10-30
 year: 2026
-moddifyDate: 2026-11-6 13:57:10
+moddifyDate: 2026-11-6 13:57:12
 ---
 
 # nginx 安装

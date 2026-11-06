@@ -1,9 +1,9 @@
 ---
 title: linux安装node
 description: linux常用命令
-date: "\"\\\"2025-10-21 18:37:29\\\"\""
+date: 2025-10-21
 year: 2025
-moddifyDate: 2026-11-6 13:58:45
+moddifyDate: 2026-11-6 13:59:39
 ---
 
 # linux安装node

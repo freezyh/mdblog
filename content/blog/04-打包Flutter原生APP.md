@@ -3,7 +3,7 @@ title: 04 · 打包 Flutter 原生 APP（Android / iOS）+ assets 静态资源
 description: 打包 Flutter 原生 APP（Android / iOS）+ assets 静态资源
 date: 2026-11-6
 year: 2026
-moddifyDate: "2026-11-6 11:27:34"
+moddifyDate: 2026-11-6 13:42:37
 ---
 
 # 04 · 打包 Flutter 原生 APP（Android / iOS）+ assets 静态资源

@@ -1,9 +1,9 @@
 ---
-title: 05 · Flutter 高级项目!
+title: 05 · Flutter 高级项目（Channel 原生通信 + 混合开发 + 仿商城项目）
 description: Flutter 高级项目
 date: 2026-11-6
 year: 2026
-moddifyDate: "2026-11-6 10:27:39"
+moddifyDate: 2026-11-6 14:19:52
 ---
 
 # 05 · Flutter 高级项目（Channel 原生通信 + 混合开发 + 仿商城项目）

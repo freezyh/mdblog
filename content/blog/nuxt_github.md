@@ -1,9 +1,9 @@
 ---
 title: Nuxt项目部署到github
 description: Nuxt项目部署到github
-date: "\"\\\"2025-10-22 15:42:58\\\"\""
+date: 2025-10-22
 year: 2025
-moddifyDate: 2026-11-6 13:58:38
+moddifyDate: 2026-11-6 13:59:39
 ---
 
 # Nuxt项目部署到github

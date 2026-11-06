@@ -1,12 +1,12 @@
 ---
-title: 02 · Flutter 基础（环境 + 组件，对应大纲第 2 部分）
+title: 02 · Flutter 基础（环境 + 组件）
 description: Flutter 基础（环境 + 组件）
 date: 2026-11-6
 year: 2026
-moddifyDate: 2026-11-6 13:50:32
+moddifyDate: 2026-11-6 14:30:32
 ---
 
-# 02 · Flutter 基础（环境 + 组件，对应大纲第 2 部分）
+# 02 · Flutter 基础（环境 + 组件）
 
 ---
 

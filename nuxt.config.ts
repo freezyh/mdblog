@@ -19,6 +19,8 @@ export default defineNuxtConfig({
     build: {
       markdown: {
         highlight: {
+          // 内置仅包含 bash / html / mdc / vue / yml / scss / ts，其它语言需显式列出
+          langs: ["dart"],
           theme: {
             default: "material-theme-lighter",
             dark: "material-theme-ocean",

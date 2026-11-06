@@ -32,7 +32,7 @@ const isExampleFrame = computed(() => props.meta && props.meta.split(" ").includ
 const noRoot = computed(() => props.meta && props.meta.split(" ").includes("no-root"));
 
 const frameType = computed(() => {
-  if (["sh", "bash", "shell"].includes(props.language))
+  if (["sh", "bash", "shell", "dart"].includes(props.language))
     return "terminal";
   if (props.language)
     return "code";

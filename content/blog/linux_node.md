@@ -1,11 +1,12 @@
 ---
 title: linux安装node
 description: linux常用命令
-date: 2025-10-21 18:37:29
+date: "\"\\\"2025-10-21 18:37:29\\\"\""
 year: 2025
+moddifyDate: 2026-11-6 13:58:45
 ---
 
-## linux安装node
+# linux安装node
 
 版本 Node20+ 安装包里面没有 bin 目录，目前没有找到手动安装的方法，采用 nvm 安装
 

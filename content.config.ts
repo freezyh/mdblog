@@ -14,6 +14,7 @@ export default defineContentConfig({
         year: z.string(),
         title: z.string().nonempty(),
         description: z.string().nonempty(),
+        moddifyDate: z.string(),
         /* url: z.string().url(),
         minRead: z.number(),
         image: z.string(),

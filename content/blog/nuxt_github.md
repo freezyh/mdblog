@@ -1,11 +1,12 @@
 ---
 title: Nuxt项目部署到github
 description: Nuxt项目部署到github
-date: 2025-10-22 15:42:58
+date: "\"\\\"2025-10-22 15:42:58\\\"\""
 year: 2025
+moddifyDate: 2026-11-6 13:58:38
 ---
 
-## Nuxt项目部署到github
+# Nuxt项目部署到github
 
 需要配置nuxt.config.ts, 否则会出现在路由后面自动添加 `/` 比如访问 `https://xxxx.github.io/mdblog/blog` 会自动跳转 `https://xxxx.github.io/mdblog/blog/`
 

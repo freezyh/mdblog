@@ -1,11 +1,12 @@
 ---
-title: md写作案例页面
+title: 案例页面
 description: test描述
 date: 2025-10-20
 year: 2025
+moddifyDate: 2026-11-6 13:57:02
 ---
 
-## 案例页面
+# 案例页面
 
 Here is some content.
 

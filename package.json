@@ -3,11 +3,12 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "nuxt build",
+    "build": "node scripts/update-blog-frontmatter.mjs && nuxt build",
     "dev": "nuxt dev",
     "sit": "npx dotenv-cli -e .env.sit -o -- nuxt dev",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
+    "fmd": "node scripts/update-blog-frontmatter.mjs",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare"

@@ -1,11 +1,12 @@
 ---
 title: pm2常用命令
 description: pm2常用命令
-date: 2025-10-21 11:13:41
+date: "\"\\\"2025-10-21 11:13:41\\\"\""
 year: 2025
+moddifyDate: 2026-11-6 13:58:31
 ---
 
-## pm2常用命令
+# pm2常用命令
 
 ```bash [重命名进程/应用]
 pm2 start app.js --name 名称

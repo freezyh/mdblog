@@ -1,9 +1,12 @@
 ---
-title: git常见问题
+title: git常见处理
 description: git常见处理
-date: 2025-10-21 09:13:57
+date: "\"2025-10-21 09:13:57\""
 year: 2025
+moddifyDate: 2026-11-6 13:56:14
 ---
+
+# git常见处理
 
 ## Failed to connect to github.com port 443 after 21115 ms: Timed out 报错解决
 

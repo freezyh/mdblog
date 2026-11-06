@@ -1,11 +1,12 @@
 ---
 title: 01 · Dart 入门实战
-description: Dart 入门实战
+description: Dart 入门实战测试
 date: 2026-11-6
 year: 2026
+moddifyDate: 2026-11-6 13:54:04
 ---
 
-# 01 · Dart 入门实战（对应大纲第 1 部分）
+# 01 · Dart 入门实战
 
 > Dart 是 Flutter 的开发语言。Flutter 中 90% 的代码就是 Dart 类 + Widget 组合，先把 Dart 语法吃透，Flutter 上手就快。
 

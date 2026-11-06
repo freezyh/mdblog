@@ -1,11 +1,12 @@
 ---
-title: pm2日志分割
+title: pm2日志分割插件pm2-logrotate
 description: pm2日志分割插件pm2-logrotate
-date: 2025-10-21 11:15:16
+date: "\"\\\"2025-10-21 11:15:16\\\"\""
 year: 2025
+moddifyDate: 2026-11-6 13:58:27
 ---
 
-## pm2日志分割插件pm2-logrotate
+# pm2日志分割插件pm2-logrotate
 
 ```bash [先安装pm2]
 npm install pm2 -g

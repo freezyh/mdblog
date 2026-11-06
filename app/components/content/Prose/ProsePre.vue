@@ -32,7 +32,7 @@ const isExampleFrame = computed(() => props.meta && props.meta.split(" ").includ
 const noRoot = computed(() => props.meta && props.meta.split(" ").includes("no-root"));
 
 const frameType = computed(() => {
-  if (["sh", "bash", "shell", "dart"].includes(props.language))
+  if (["sh", "bash", "shell"].includes(props.language))
     return "terminal";
   if (props.language)
     return "code";
@@ -40,6 +40,9 @@ const frameType = computed(() => {
 });
 
 const shouldBlurUnhighlightedLines = computed(() => props.meta && props.meta.split(" ").includes("blur"));
+
+// 终端样式或带文件名的代码块才渲染顶部标题栏
+const hasFrame = computed(() => frameType.value === "terminal" || Boolean(props.filename));
 
 const copied = ref(false);
 
@@ -61,10 +64,10 @@ function copyCode() {
 </script>
 
 <template>
-  <div class="mb-6">
+  <div class="relative mb-6">
     <div
-      v-if="filename || frameType === 'terminal'"
-      class="frame flex justify-between items-center px-6 border border-slate-200 rounded-t-md backdrop-blur-[3px] h-10"
+      v-if="hasFrame"
+      class="frame flex items-center gap-3 px-6 border border-slate-200 rounded-t-md backdrop-blur-[3px] h-10"
       :class="[
         `frame-${frameType}`,
       ]"
@@ -81,9 +84,26 @@ function copyCode() {
         v-if="filename"
         class="h-10 inline-flex items-center border-b border-indigo-600 text-xs"
       >{{ filename }}</span>
+    </div>
+    <pre
+      ref="cw"
+      class="shiki border border-slate-200 rounded-md backdrop-blur-[3px]"
+      :class="[{
+        'border-t-0 rounded-t-none rounded-b-md': hasFrame,
+        'blur-lines': shouldBlurUnhighlightedLines,
+        'rounded-t-none border-t-0': isExampleFrame,
+        'no-root': noRoot,
+      }]"
+    >
+      <slot />
+    </pre>
+    <div
+      class="absolute right-4 flex items-center"
+      :class="hasFrame ? 'top-0 h-10' : 'top-2 rounded bg-white/80 px-1 backdrop-blur-sm'"
+    >
       <button
         v-show="!copied && !hideCopy"
-        class="my-2 -mr-1 text-slate-400 hover:text-slate-600"
+        class="text-slate-400 hover:text-slate-600"
         title="Copy to clipboard"
         @click="copyCode"
       >
@@ -93,23 +113,11 @@ function copyCode() {
       </button>
       <svg
         v-show="!hideCopy && copied"
-        class="h-5 w-5 -mr-1 text-slate-400 pointer-events-none"
+        class="h-5 w-5 text-slate-400 pointer-events-none"
         fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"
       >
         <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
       </svg>
     </div>
-    <pre
-      ref="cw"
-      class="shiki border border-slate-200 rounded-md backdrop-blur-[3px]"
-      :class="[{
-        'border-t-0 rounded-t-none rounded-b-md': frameType !== 'none' && filename || frameType === 'terminal',
-        'blur-lines': shouldBlurUnhighlightedLines,
-        'rounded-t-none border-t-0': isExampleFrame,
-        'no-root': noRoot,
-      }]"
-    >
-      <slot />
-    </pre>
   </div>
 </template>

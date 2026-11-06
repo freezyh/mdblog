@@ -2,17 +2,18 @@
   @apply block px-6;
 }
 
+/* 变量名需与 nuxt.config 里 theme 的 key 一致：default / dark */
 :root {
-  --shiki-light: #1e3a8a;
+  --shiki-default: #90a4ae;
 }
 
 .shiki,
 .shiki span {
-  color: var(--shiki-light);
-  background-color: var(--shiki-light-bg);
-  font-style: var(--shiki-light-font-style);
-  font-weight: var(--shiki-light-font-weight);
-  text-decoration: var(--shiki-light-text-decoration);
+  color: var(--shiki-default);
+  background-color: var(--shiki-default-bg);
+  font-style: var(--shiki-default-font-style);
+  font-weight: var(--shiki-default-font-weight);
+  text-decoration: var(--shiki-default-text-decoration);
 }
 
 @media (prefers-color-scheme: dark) {

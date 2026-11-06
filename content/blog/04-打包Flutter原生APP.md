@@ -15,7 +15,7 @@ year: 2026
 
 **关键文件**：`android/app/build.gradle`、`android/app/src/main/AndroidManifest.xml`
 
-```gradle
+```groovy
 // android/app/build.gradle
 android {
     namespace "com.example.myapp"

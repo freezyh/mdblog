@@ -10,45 +10,6 @@ moddifyDate: 2026-11-6 17:33:09
 
 > 整理自思维导图《FlutterNodeForPDF》 · 共 34 个知识点 · 每个知识点附完整可运行示例
 
-## 目录
-
-- [01 环境与常用命令](#01-环境与常用命令)
-- [02 MaterialApp 与 Scaffold（脚手架）](#02-materialapp-与-scaffold脚手架)
-- [03 Text 与 RichText（文字样式）](#03-text-与-richtext文字样式)
-- [04 Image 图片](#04-image-图片)
-- [05 Container 与 BoxDecoration（容器装饰）](#05-container-与-boxdecoration容器装饰)
-- [06 Row / Column（Flex 弹性布局）](#06-row--columnflex-弹性布局)
-- [07 Stack 与 Positioned（叠加布局）](#07-stack-与-positioned叠加布局)
-- [08 尺寸类布局组件](#08-尺寸类布局组件)
-- [09 按钮家族（Material 风格）](#09-按钮家族material-风格)
-- [10 Chip 碎片与 Wrap 换行布局](#10-chip-碎片与-wrap-换行布局)
-- [11 选择控件](#11-选择控件)
-- [12 对话框](#12-对话框)
-- [13 SnackBar 操作提示栏](#13-snackbar-操作提示栏)
-- [14 表单 Form 与 TextFormField](#14-表单-form-与-textformfield)
-- [15 TextField 文本框](#15-textfield-文本框)
-- [16 ListView 列表](#16-listview-列表)
-- [17 GridView 网格视图](#17-gridview-网格视图)
-- [18 PageView 滑动页面](#18-pageview-滑动页面)
-- [19 ExpansionPanelList 收缩面板](#19-expansionpanellist-收缩面板)
-- [20 DataTable 数据表格](#20-datatable-数据表格)
-- [21 Stepper 步骤条](#21-stepper-步骤条)
-- [22 导航结构组件](#22-导航结构组件)
-- [23 路由 Routes 与 Navigator](#23-路由-routes-与-navigator)
-- [24 StatefulWidget 与 StatelessWidget](#24-statefulwidget-与-statelesswidget)
-- [25 InheritedWidget（跨层共享数据）](#25-inheritedwidget跨层共享数据)
-- [26 Future 与 async/await + FutureBuilder](#26-future-与-asyncawait--futurebuilder)
-- [27 Stream / StreamController / StreamBuilder](#27-stream--streamcontroller--streambuilder)
-- [28 RxDart（Observable 反应式编程）](#28-rxdartobservable-反应式编程)
-- [29 BLoC 模式与 ScopedModel](#29-bloc-模式与-scopedmodel)
-- [30 http 网络请求与 JSON 序列化](#30-http-网络请求与-json-序列化)
-- [31 动画](#31-动画)
-- [32 国际化](#32-国际化)
-- [33 MethodChannel（调用原生 API）](#33-methodchannel调用原生-api)
-- [34 Sliver 滚动体系](#34-sliver-滚动体系)
-
----
-
 ## 01 环境与常用命令
 
 Flutter CLI 是日常开发的入口：创建工程、运行、检查环境、升级。
@@ -184,6 +145,7 @@ Container(
 Container 是最常用的容器，配合 EdgeInsets、Alignment、BoxDecoration 实现边距、对齐、圆角、边框、阴影、渐变。
 
 **要点**：
+
 - `Alignment(x,y)` x/y 取 -1~1（-1 左/上，0 中，1 右/下），也可用封装 `Alignment.topCenter`
 - EdgeInsets：`all()` / `only()`
 - 阴影 `BoxShadow(color, blurRadius 模糊度, spreadRadius 扩散, offset Offset(0,3))`，可叠加多个
@@ -962,6 +924,7 @@ void demo() async {
 ## 31 动画
 
 **要点**：
+
 - `vsync` 传入 this（State 需 `with TickerProviderStateMixin`），防止屏幕外动画消耗资源
 - `lowerBound/upperBound` 最小/最大值
 - `forward 播放 / dispose 停止 / dismiss 消失`

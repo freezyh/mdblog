@@ -77,13 +77,9 @@ void main() {
 ```dart
 // lib/app.dart
 import 'package:flutter/material.dart';
-
 import 'provider_demo/provider_counter_page.dart';
-
 import 'riverpod_demo/riverpod_counter_page.dart';
-
 import 'bloc_demo/bloc_counter_page.dart';
-
 import 'getx_demo/getx_counter_page.dart';
 
 class AppShell extends StatefulWidget {
@@ -167,7 +163,6 @@ class CounterModel extends ChangeNotifier {
 ```dart
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-
 import 'counter_model.dart';
 
 class ProviderCounterPage extends StatelessWidget {
@@ -270,7 +265,6 @@ class CounterNotifier extends Notifier<int> {
 ```dart
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-
 import 'counter_provider.dart';
 
 class RiverpodCounterPage extends ConsumerWidget {
@@ -351,7 +345,6 @@ class ResetEvent extends CounterEvent {}
 
 ```dart
 import 'package:flutter_bloc/flutter_bloc.dart';
-
 import 'counter_event.dart';
 
 class CounterBloc extends Bloc<CounterEvent, int> {
@@ -369,7 +362,6 @@ class CounterBloc extends Bloc<CounterEvent, int> {
 // lib/bloc_demo/bloc_counter_page.dart
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-
 import 'counter_bloc.dart';
 import 'counter_event.dart';
 
@@ -465,7 +457,6 @@ class CounterController extends GetxController {
 // lib/getx_demo/getx_counter_page.dart
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-
 import 'counter_controller.dart';
 
 class GetxCounterPage extends StatelessWidget {

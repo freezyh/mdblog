@@ -3,7 +3,7 @@ title: vscode扩展flutter json转dart model
 description: vscode扩展flutter json转dart model
 date: 2026-11-11
 year: 2026
-moddifyDate: 2026-11-11 14:41:42
+moddifyDate: 2026-11-11 14:47:26
 ---
 
 # vscode扩展flutter json转dart model

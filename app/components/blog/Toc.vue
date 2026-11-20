@@ -1,7 +1,17 @@
 <script setup lang="ts">
 defineProps<{
   links: Array<{ id: string; text: string }>;
+  activeId?: string;
 }>();
+
+const { scrollToId } = useAnchorScroll();
+
+function onClick(id: string) {
+  // 手动滚动以适配 #__nuxt 容器滚动模式；成功后同步 URL
+  if (scrollToId(id, "smooth")) {
+    history.replaceState(null, "", `${location.pathname}#${id}`);
+  }
+}
 </script>
 
 <template>
@@ -14,7 +24,14 @@ defineProps<{
         目录
       </h2>
       <nav>
-        <NuxtLink v-for="link in links" :key="link.id" :to="`#${link.id}`" class="block text-xs mb-3 hover:underline">
+        <NuxtLink
+          v-for="link in links"
+          :key="link.id"
+          :to="`#${link.id}`"
+          class="block text-xs mb-3 hover:underline"
+          :class="link.id === activeId ? 'text-blue-600 dark:text-blue-400 font-semibold' : 'text-slate-600 dark:text-slate-300'"
+          @click.prevent="onClick(link.id)"
+        >
           {{ link.text }}
         </NuxtLink>
       </nav>
